@@ -8,7 +8,7 @@ diff bad/fooobar.yaml good/fooobar.yaml
 <     ##
 ```
 
-`good` is not so good, some my very first comment lines are gone.
+`good` is not so good, because my very first comment lines are gone.
 
 # original source
 
