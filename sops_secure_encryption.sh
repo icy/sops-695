@@ -5,6 +5,8 @@
 # Author  : Ky-Anh Huynh
 # License : MIT
 
+set -u
+
 logs() {
   1>&2 echo ":: $*"
 }
