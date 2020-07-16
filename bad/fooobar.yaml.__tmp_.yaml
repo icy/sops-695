@@ -1,0 +1,21 @@
+prometheus-node-exporter:
+## Add the 'node-exporter' label to be used by serviceMonitor to match standard common usage in rules and grafana dashboards
+##  podLabels:
+        jobLabel: node-exporter
+    extraArgs:
+    - --collector.filesystem.ignored-mount-points=^/(dev|proc|sys|var/lib/docker/.+)($|/)
+    - --collector.filesystem.ignored-fs-types=^(autofs|binfmt_misc|cgroup|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|mqueue|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|sysfs|tracefs)$
+sops:
+    kms:
+    -   arn: arn:aws:kms:eu-central-1:000000000000:key/75f9aedd-ce9e-4b85-b112-000000000000
+        created_at: '2020-07-16T19:55:40Z'
+        enc: AQICAHgquprv1l5xoZPFQCgP7aJyPm2SG/VQw5mKqJ1aWMOo1wG4j2FKc3zqrvwA8pgasw9YAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMb1Wc2RW1P/Rz7FbqAgEQgDu75hzTidzD4CeU+4Fyx0K6dc8WtFMzlUm9hc8+1MaSc+cCZhqCTbo6zhMThz+cVm1CQk2BkNnMlJmyWQ==
+        aws_profile: ""
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    lastmodified: '2020-07-16T19:55:41Z'
+    mac: ENC[AES256_GCM,data:QyfZE1jmqtYVOkWVikG3lg0FLtdRG3LeIs1NAABb7vkq4kC4MVGyqcr4fcPCuEDqqaoQqWBRI92WnqrW4007lPC0IPHvTNr1AWWPpUxJ0GlVSVm54Mbk0p1dfCcgPqHIuaef+P8bGcOl63gNNDbKM9KCrS1+WLFQR31+jrsnr9Q=,iv:dAvm9STnAlwvOb8YXMdckCXV8QwK/lK5w6FBTiZX2l0=,tag:FETayzeuMtdnUqCru4gpYg==,type:str]
+    pgp: []
+    encrypted_regex: (newrelic|certificate|private|pass|key|value)|(api_url)
+    version: 3.6.0
