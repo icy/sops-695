@@ -5,6 +5,10 @@
 # Author  : Ky-Anh Huynh
 # License : MIT
 
+logs() {
+  1>&2 echo ":: $*"
+}
+
 encrypt_all() {
   # FIXME: This may not work on MacOs, need some testing
   while read -r file; do
