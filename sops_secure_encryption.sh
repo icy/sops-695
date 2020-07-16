@@ -31,7 +31,7 @@ encrypt_all() {
       return 1
     fi
 
-    # File already encrypted, it's asked to encrypted another time
+    # File already encrypted, it's asked to be encrypted another time
     if [[ ! -f "$_tmp_file" ]]; then
       continue
     fi
