@@ -1,4 +1,4 @@
-# Purpose : Securely encrypt file with ops, 
+# Purpose : Securely encrypt file with sops, 
 #           due to a bug https://github.com/mozilla/sops/issues/695
 #           we encrypt, decrypt if that's fine, and replace the original file.
 # Warning : This method will replace the original file.
