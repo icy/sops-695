@@ -8,6 +8,8 @@ diff bad/fooobar.yaml good/fooobar.yaml
 <     ##
 ```
 
+`good` is not so good, some my very first comment lines are gone.
+
 # original source
 
 https://gist.github.com/icy/d567dcf6e767d22e3683eb075a442967
