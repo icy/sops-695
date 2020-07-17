@@ -1,0 +1,3 @@
+creation_rules:
+- path_regex: ./
+  encrypted_regex: '(newrelic|certificate|private|pass|key|value)|(api_url)'
