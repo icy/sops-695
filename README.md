@@ -1,6 +1,7 @@
 # sops-695
 
-Discussed in https://github.com/mozilla/sops/issues/695
+Discussed in https://github.com/mozilla/sops/issues/695 .
+The best summary from my side: https://github.com/mozilla/sops/issues/695#issuecomment-659771541
 
 ```
 diff bad/fooobar.yaml good/fooobar.yaml 
