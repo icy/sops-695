@@ -12,7 +12,7 @@ set -u
 # FIXME: This should not be the top root directory
 # FIXME: where the .sops.yaml is there :D
 : "${D_ROOT}"
-: "${SOPS:-sops}"
+: "${SOPS:=sops}"
 
 logs() {
   1>&2 echo ":: $*"
