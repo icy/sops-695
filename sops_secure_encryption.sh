@@ -12,6 +12,7 @@ set -u
 # FIXME: This should not be the top root directory
 # FIXME: where the .sops.yaml is there :D
 : "${D_ROOT}"
+: "${SOPS:-sops}"
 
 logs() {
   1>&2 echo ":: $*"
@@ -23,7 +24,7 @@ encrypt_all() {
     logs "Encrypting $file"
     _tmp_file="$file.__tmp_.${file##*.}"
     rm -f "$_tmp_file" || return 1
-    2>&1 sops -e --output "$_tmp_file" "$file" \
+    2>&1 "${SOPS}" -e --output "$_tmp_file" "$file" \
     | awk 'BEGIN{ret=1}
       {
         if ($0 ~ /The file you have provided contains a top-level entry called/) {
@@ -49,7 +50,7 @@ encrypt_all() {
     fi
 
     # File encrypted for the first type
-    if sops -d "$_tmp_file" >/dev/null; then
+    if "${SOPS}" -d "$_tmp_file" >/dev/null; then
       mv -f "$_tmp_file" "$file"
       continue
     fi
@@ -59,3 +60,5 @@ encrypt_all() {
     return 1
   done < <(find "$D_ROOT/" -type f -iname "*.yaml")
 }
+
+"${@:-:}"
