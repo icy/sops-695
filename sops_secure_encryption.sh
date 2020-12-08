@@ -1,4 +1,6 @@
-# Purpose : Securely encrypt file with sops 3.6.0, 
+#!/usr/bin/env bash
+
+# Purpose : Securely encrypt file with sops 3.6.0,
 #           due to a bug https://github.com/mozilla/sops/issues/695
 #           we encrypt, decrypt if that's fine, and replace the original file.
 # Warning : This method will replace the original file.
